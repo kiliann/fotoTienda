@@ -15,7 +15,7 @@ Class Metodos{
         if ($password==$rpassword){
 
             $password_encry = password_hash($password, PASSWORD_BCRYPT);
-            $insercion = "INSERT INTO clientes(nombre, correo, contrasena) VALUES ('$correo','$nombre','$password_encry', $telefono)";
+            $insercion = "INSERT INTO clientes(nombre, correo, password, telefono) VALUES ('$correo','$nombre','$password_encry', $telefono)";
             $consulta = "SELECT correo FROM clientes WHERE correo LIKE '$correo'";
             $comprobacion = $this->conexion->consultas($consulta);
             //echo $comprobacion = $this->conexion->filasAfectadas()  ;

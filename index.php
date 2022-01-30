@@ -29,7 +29,7 @@ $metodos = new Metodos();
 
             <button name="entrar" type="submit" class="submit-btn">Entrar</button>
         </form>
-        <form id="registro" method="post" class="input-grupo" >
+        <form id="registro"  class="input-grupo" method="post" action="#">
 
             <input name="nombre" type="text" class="input-registro" placeholder="Nombre">
 
@@ -41,7 +41,7 @@ $metodos = new Metodos();
 
             <input name="telefono" type="text" class="input-registro" placeholder="Teléfono">
 
-            <button name="enviar" type="submit" class="submit-btn" value="Enviar">Enviar</button>
+            <input name="enviar" type="submit" class="submit-btn" value="Enviar"></input>
 
         </form>
         <?php
