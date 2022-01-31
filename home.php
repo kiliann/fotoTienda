@@ -1,6 +1,8 @@
 <?php
 session_start();
-$_SESSION['usuario'];
+
+
+if (isset($_SESSION['usuario'])){
 
 
 ?>
@@ -29,3 +31,8 @@ $_SESSION['usuario'];
 
 </body>
 </html>
+<?php
+}else{
+    echo "Acceso Denegado";
+}
+?>

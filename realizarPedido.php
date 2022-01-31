@@ -2,6 +2,8 @@
 require_once "metodos.php";
 $metodos = new Metodos();
 session_start();
+if(isset($_SESSION['usuario'])){
+
 
 
 ?>
@@ -46,3 +48,9 @@ session_start();
         ?>
     </div>
 </div>
+
+<?php
+}else{
+    echo "Acceso denegado";
+}
+?>
