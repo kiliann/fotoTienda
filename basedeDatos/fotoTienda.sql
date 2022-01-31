@@ -4,9 +4,9 @@ CREATE DATABASE fototienda CHARACTER SET 'UTF8' COLLATE 'utf8_general_ci';
 
 CREATE TABLE clientes(
 idCliente TINYINT unsigned NOT NULL AUTO_INCREMENT,
-correo VARCHAR(20) NOT NULL,
-nombre VARCHAR(20)	NOT NULL,
-password VARCHAR(20) NOT NULL,
+correo VARCHAR(50) NOT NULL,
+nombre VARCHAR(40)	NOT NULL,
+password VARCHAR(80) NOT NULL,
 telefono int(10),
 PRIMARY KEY (idCliente)
 

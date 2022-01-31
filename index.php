@@ -23,12 +23,18 @@ $metodos = new Metodos();
             <button class="btn-superior" onclick="registro()">Registro</button>
         </div>
 
-        <form id="login" class="input-grupo">
-            <input type="text" class="input-registro" placeholder="Correo" required>
-            <input type="password" class="input-registro" placeholder="Introducir Contraseña" required>
+        <form id="login" class="input-grupo" method="post" action="#">
+            <input name="correo" type="text" class="input-registro" placeholder="Correo" required>
+            <input name="pass" type="password" class="input-registro" placeholder="Introducir Contraseña" required>
 
             <button name="entrar" type="submit" class="submit-btn">Entrar</button>
         </form>
+
+        <?php
+        if (isset($_POST['entrar'])){
+            $metodos->iniciarSesion($_POST['correo'],$_POST['pass']);
+        }
+        ?>
         <form id="registro"  class="input-grupo" method="post" action="#">
 
             <input name="nombre" type="text" class="input-registro" placeholder="Nombre">
