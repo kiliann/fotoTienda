@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-
+//Control de acceso solo para usuarios que inicien sesión
 if (isset($_SESSION['usuario'])){
 
 

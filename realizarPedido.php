@@ -2,6 +2,8 @@
 require_once "metodos.php";
 $metodos = new Metodos();
 session_start();
+
+//Aqui contrlamos el acceso a los usurio para que no pueda acceder nadie sin registrar
 if(isset($_SESSION['usuario'])){
 
 
@@ -37,17 +39,31 @@ if(isset($_SESSION['usuario'])){
         <form method="post" enctype="multipart/form-data" action="#">
             <label>Subier Imagenes</label>
             <!-- <input name="nombre" type="text" placeholder="Nombre de la Imagen" required><br/>-->
-            <input type="file" name="imagenes"><br/>
-            <input type="submit" id="submit" value="Subir">
+
+            <input type="file" name="imagenes[]" multiple=""><br/>
+            <h3>Selección Multiple Pulse "ctrl" y selecciones las Imganes<br/>
+            Tamaño maximo archivo 2 MB</h3><br/>
+            <input class="subir" type="submit" id="submit" value="Subir">
         </form>
 
-
         <?php
+        //Aqui es donde cada vez qu ele damos a subir se genera el pedido completo y muetra las imagenes subidas
+        // como mejoras lo ideal seria generar la carpeta y hasta no terminar el pedido que no se pudiera generar
+        // Eso es una mejora para añadir
+        if (isset($_FILES['imagenes'])){
+            echo "<div id='imagenesSubidas'>";
+            $metodos->subidaControladaImagenes($metodos->crearCarpetaPedido());
+            echo "</div>";
+        }
 
-        $metodos->subidaControladaImagenes();
         ?>
+
+
     </div>
+
 </div>
+
+
 
 <?php
 }else{

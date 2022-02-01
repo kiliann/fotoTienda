@@ -162,6 +162,43 @@ nav a:hover {
     color: white;
 }
 
+/**
+        Estilo de botos subir imagenes
+ */
+.subir{
+    color: #0099CC;
+    /* Eliminar color de fondo */
+    background: transparent;
+    /* Grosor del borde, estilo de línea y color */
+    border: 2px solid #0099CC;
+    /* Añadir esquinas curvadas */
+    border-radius: 6px;
+    /* Poner texto en mayúsculas */
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+.subir {
+    background-color: white;
+    color: black;
+    border: 2px solid #008CBA;
+}
+/* Al poner el curso encima (hover) */
+.subir:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
 .contenido{
     display: flex;
     margin:100px auto;
@@ -171,10 +208,17 @@ nav a:hover {
 .contenido div{
 
     width: 500px;
-    height: 400px;
+    min-height: 400px;
     border: 1px solid black;
     text-align: center;
     /*background-color: cornflowerblue;*/
     background: linear-gradient(to right, #ff105f, #ffad06);
 
 }
+#imagenesSubidas{
+    width: 500px;
+}
+#imagenesSubidas img{
+    width: 500px;
+}
+
