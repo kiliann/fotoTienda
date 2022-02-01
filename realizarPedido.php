@@ -49,7 +49,7 @@ if(isset($_SESSION['usuario'])){
         <?php
         //Aqui es donde cada vez qu ele damos a subir se genera el pedido completo y muetra las imagenes subidas
         // como mejoras lo ideal seria generar la carpeta y hasta no terminar el pedido que no se pudiera generar
-        // Eso es una mejora para añadir
+        // Eso es una mejora para añadir que no se realizo por falta de tiempo.
         if (isset($_FILES['imagenes'])){
             echo "<div id='imagenesSubidas'>";
             $metodos->subidaControladaImagenes($metodos->crearCarpetaPedido());
